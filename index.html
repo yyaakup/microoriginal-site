@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<head>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- (Senin önceki font ve stil bağlantıların burada olabilir, silmedim.) -->
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amarante&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Delius&family=Kavoon&family=Meow+Script&family=Rubik+Glitch&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amarante&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Delius&family=Kavoon&family=Meow+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Meow+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Delius&family=Meow+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amarante&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Delius&family=Meow+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Amarante&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Delius&family=Kavoon&family=Meow+Script&family=Rubik+Glitch&display=swap" rel="stylesheet">
+
+	
+</head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yakında Açılıyoruz - Micro Original</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Sayfa Genel Stili */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sol Kısım (Yazılar) */
+        .left-section {
+            width: 70%; /* Sol kısım %70 */
+            padding: 40px;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+/* Sol Üst Yazı - Micro Original */
+.left-section .logo {
+  font-family: "Meow Script", cursive;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: -250px;
+    margin-bottom: 30px;
+}
+
+
+        /* Sağ Üst Sosyal Medya Linkleri */
+        .social-media {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .social-media a {
+            color: #fff;,
+			  font-family: "Akaya Kanadaka", system-ui;
+
+            font-size: 19px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-media a span {
+		  font-family: "Akaya Kanadaka", system-ui;
+
+            margin-left: 10px;
+            margin-top: -150px;
+            margin-right: 50px;
+        }
+
+        i {
+            margin-left: -10px;
+            margin-top: -150px;
+            margin-right: 0px;
+        }
+
+        /* Ana Başlık */
+        .main-title {
+		  font-family: "Amarante", serif;
+
+            font-size: 50px;
+            color: #9b59b6;
+            font-weight: bold;
+            margin-top: 100px;
+        }
+
+        /* Alt Yazı */
+        .sub-title {
+		  font-family: "Delius", cursive;
+
+            font-size: 20px;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        /* Sayaç Stili */
+        .countdown {
+    font-family: 'Poppins', sans-serif;  /* Güzel bir yazı tipi */
+            font-size: 30px;
+            color: white;
+            text-align: left; /* Sola hizalama */
+            padding-left: 100px; /* Daha fazla sola kaydırma */
+            position: relative;  /* Konumlandırma eklendi */
+            top: 80px;  /* Sayaç metnini biraz aşağıya indir */
+			margin-left: -110px;
+			margin-top: 45px;
+        }
+
+        .countdown .number {
+            font-size: 50px; /* Sayıları büyük yapmak için */
+            color: #9b59b6; /* Sayılar mor olacak */
+  font-family: "Rubik Glitch", system-ui;
+            margin: 0 10px;
+        }
+
+/* Etiket Yazı Tipi */
+.label {
+  font-family: "Delius", cursive;
+    font-size: 16px;
+    color: white;
+}
+
+
+        /* Sağ Kısım (Resimler) */
+        .right-section {
+            width: 30%; /* Sağ kısım %30 */
+            position: relative;
+            background-color: #000; /* Arkaplan siyah */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Resimlerin Kayma Efekti */
+        .right-section .images {
+            display: flex;
+            transition: transform 1s ease-in-out; /* Kaydırma efekti */
+        }
+
+        .right-section img {
+            width: 100%;
+            object-fit: cover;  /* Resimlerin sığdırılması */
+        }
+
+        /* Oklar */
+        .arrows {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+
+        .arrows span {
+            color: #fff;
+            font-size: 40px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .arrows span:hover {
+            transform: scale(1.2);
+        }
+		  .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.hizliresim.com/piaj28x.png');
+            background-size: cover;
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: -1;
+            transition: transform 0.2s ease-in-out;
+        }
+		
+		.soz {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-size: 20px;
+    color: #fff;
+	position: relative:
+    text-align: center;
+    margin-top: -50px;
+    font-style: italic;
+	    opacity: 0.5; /* Saydamlık */
+
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.hizliresim.com/piaj28x.png');
+    background-size: cover;
+    opacity: 0.3; /* Saydamlık %30 */
+    pointer-events: none;
+    z-index: -1;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+.left-section .logo {
+  font-family: "Meow Script", cursive;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -200px;
+
+    margin-bottom: 30px;
+}
+
+        .social-media {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .social-media a {
+            color: #fff;,
+			  font-family: "Akaya Kanadaka", system-ui;
+
+            font-size: 15px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-media a span {
+		  font-family: "Akaya Kanadaka", system-ui;
+
+            margin-left: 50px;
+            margin-top: -120px;
+            margin-right: -30px;
+        }
+ i {
+            margin-left: 50px;
+            margin-top: -120px;
+            margin-right: -30px;
+        }
+.main-title {
+		  font-family: "Amarante", serif;
+
+            font-size: 50px;
+            color: #9b59b6;
+            font-weight: bold;
+            margin-top: 90px;
+        }
+
+        /* Alt Yazı */
+        .sub-title {
+		  font-family: "Delius", cursive;
+
+            font-size: 20px;
+            margin-top: 10px;
+            color: #fff;
+        }
+		.soz {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-size: 20px;
+    color: #fff;
+	position: relative:
+    text-align: center;
+    margin-top: -90px;
+    font-style: italic;
+	    opacity: 0.5; /* Saydamlık */
+
+}
+}
+
+
+
+
+@media (max-width: 768px) {
+.left-section .logo {
+  font-family: "Meow Script", cursive;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: -150px;
+
+    margin-bottom: 30px;
+}
+
+        .social-media {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .social-media a {
+            color: #fff;,
+			  font-family: "Akaya Kanadaka", system-ui;
+
+            font-size: 15px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+			
+        }
+
+        .social-media a span {
+		  font-family: "Akaya Kanadaka", system-ui;
+
+            margin-left: 70px;
+            margin-top: -120px;
+            margin-right: -60px;
+			display: none;
+        }
+ i {
+font-size: 25px;
+            margin-left: 50px;
+            margin-top: -120px;
+            margin-right: -30px;
+        }
+.main-title {
+		  font-family: "Amarante", serif;
+
+            font-size: 50px;
+            color: #9b59b6;
+            font-weight: bold;
+            margin-top: 90px;
+        }
+
+        /* Alt Yazı */
+        .sub-title {
+		  font-family: "Delius", cursive;
+
+            font-size: 20px;
+            margin-top: 10px;
+            color: #fff;
+        }
+		.soz {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-size: 20px;
+    color: #fff;
+	position: relative:
+    text-align: center;
+    margin-top: -90px;
+    font-style: italic;
+	    opacity: 0.5; /* Saydamlık */
+
+}
+
+
+.countdown {
+    font-family: 'Poppins', sans-serif;  /* Güzel bir yazı tipi */
+            font-size: 20px;
+            color: white;
+            text-align: left; /* Sola hizalama */
+            padding-left: 100px; /* Daha fazla sola kaydırma */
+            position: relative;  /* Konumlandırma eklendi */
+            top: 80px;  /* Sayaç metnini biraz aşağıya indir */
+			margin-left: -110px;
+			margin-top: 45px;
+        }
+
+        .countdown .number {
+            font-size: 40px; /* Sayıları büyük yapmak için */
+            color: #9b59b6; /* Sayılar mor olacak */
+  font-family: "Rubik Glitch", system-ui;
+            margin: 0 10px;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    body {
+	background-color: black;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;  /* Div'leri alt alta yerleştirir */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .left-section, .right-section {
+      width: 80%;
+      margin-bottom: 20px; /* Div'ler arasına boşluk ekler */
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .left-section {
+      background-color: #000;
+      color: white;
+    }
+
+    .right-section {
+      background-color: #333;
+      color: white;
+    }
+.left-section .logo {
+  font-family: "Meow Script", cursive;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -10px;
+margin-left: -45px;
+
+    margin-bottom: 30px;
+}
+
+        .social-media {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+			
+        }
+
+        .social-media a {
+            color: #fff;,
+			  font-family: "Akaya Kanadaka", system-ui;
+
+            font-size: 10px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+			
+        }
+
+        .social-media a span {
+		  font-family: "Akaya Kanadaka", system-ui;
+
+            margin-left: 70px;
+            margin-top: 120px;
+            margin-right: -60px;
+			display: none;
+        }
+ i {
+font-size: 25px;
+            margin-left: 60px;
+            margin-top: -120px;
+            margin-right: -40px;
+        }
+.main-title {
+		  font-family: "Amarante", serif;
+
+            font-size: 35px;
+            color: #9b59b6;
+            font-weight: bold;
+            margin-top: -30px;
+        }
+
+        /* Alt Yazı */
+        .sub-title {
+		  font-family: "Delius", cursive;
+
+            font-size: 12px;
+            margin-top: 10px;
+            color: #fff;
+        }
+		.soz {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-size: 10px;
+    color: #fff;
+	position: relative:
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+	    opacity: 0.5; /* Saydamlık */
+
+}
+
+
+.countdown {
+    font-family: 'Poppins', sans-serif;  /* Güzel bir yazı tipi */
+            font-size: 10px;
+            color: white;
+            text-align: left; /* Sola hizalama */
+            padding-left: 100px; /* Daha fazla sola kaydırma */
+            position: relative;  /* Konumlandırma eklendi */
+            top: -10px;  /* Sayaç metnini biraz aşağıya indir */
+			margin-left: -110px;
+			margin-top: 45px;
+        }
+
+        .countdown .number {
+		margin-top: -20px;
+            font-size: 25px; /* Sayıları büyük yapmak için */
+            color: #9b59b6; /* Sayılar mor olacak */
+  font-family: "Rubik Glitch", system-ui;
+            margin: 0 2.2px;
+        }
+		
+		
+}
+
+.right-section {
+background-color: black;
+}
+
+
+
+
+
+
+
+		
+    </style>
+</head>
+<body>
+
+    <!-- Sol Kısım: Yazılar ve Sosyal Medya -->
+    <div class="left-section">
+        <!-- Micro Original Yazısı -->
+        <div class="logo">Micro Original</div>
+
+        <div class="social-media">
+            <a href="https://www.instagram.com/micro_original" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://twitter.com/@micro_original" target="_blank">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+            </a>
+            <a href="https://youtube.com/@micro_original" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Youtube</span>
+            </a>
+        </div>
+
+        <!-- Ana Başlık -->
+        <div class="main-title">Yakında Açılıyoruz!</div>
+
+        <!-- Alt Yazı -->
+        <div class="sub-title">
+            Micro Original ile özgün ve şık tişörtler çok yakında sizinle!
+        </div>
+
+        <!-- Sayaç -->
+        <div class="countdown">
+            <div>
+                <span id="days" class="number"></span><span class="label">Gün</span>
+                <span id="hours" class="number"></span><span class="label">Saat</span>
+                <span id="minutes" class="number"></span><span class="label">Dakika</span>
+                <span id="seconds" class="number"></span><span class="label">Saniye</span>
+            </div>
+			
+        </div>
+		<div class="sozler">
+		<p class="soz">"Her şeyin zamanı vardır ve sabır, bu zamanı bekleyebilme gücüdür."</p>
+</div>
+		
+    </div>
+
+    <!-- Sağ Kısım: Resimler ve Oklar -->
+    <div class="right-section">
+        <!-- Resimler -->
+        <div class="images">
+            <img src="https://i.hizliresim.com/jj9qch8.png" alt="Resim 1">
+            <img src="https://i.hizliresim.com/7nip3lq.png" alt="Resim 2">
+            <img src="https://i.hizliresim.com/s11fjvh.jpg" alt="Resim 3">
+        </div>
+
+        <!-- Oklar -->
+        <div class="arrows">
+            <span id="prev">&#8592;</span>
+            <span id="next">&#8594;</span>
+        </div>
+    </div>
+
+    <script>
+        // Resim geçiş animasyonu ve ok işlevselliği
+        const imagesContainer = document.querySelector('.images');
+        const images = document.querySelectorAll('.right-section img');
+        let currentIndex = 0;
+
+        // Resim geçiş fonksiyonu (kaydırma efektiyle)
+        function changeImage(direction) {
+            currentIndex = (currentIndex + direction + images.length) % images.length; // Yeni index hesapla
+            const offset = -currentIndex * 100; // Resimlerin kayması için offset değeri
+
+            // Kaydırma efekti
+            imagesContainer.style.transform = `translateX(${offset}%)`;
+        }
+
+        // Sağ ve sol ok tıklama olayları
+        document.getElementById('next').addEventListener('click', () => changeImage(1));
+        document.getElementById('prev').addEventListener('click', () => changeImage(-1));
+
+        // Otomatik geçiş fonksiyonu
+        setInterval(() => changeImage(1), 3000);  // 3 saniyede bir resim değiştir
+
+        // Sayaç kodu
+      // Hedef açılış tarihi (örnek: 12 Mayıs 2025, saat 00:00)
+const targetDate = new Date("2025-05-12T00:00:00");
+
+
+        function updateCountdown() {
+            const now = new Date();
+            const timeLeft = targetDate - now;
+
+            if (timeLeft <= 0) {
+                document.querySelector('.countdown').innerHTML = "Sayaç Sona Erdi!";
+                return;
+            }
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        // Güncellemeyi her saniye yap
+        setInterval(updateCountdown, 1000);
+		
+		
+    </script>
+
+</body>
+</html>
+ 
